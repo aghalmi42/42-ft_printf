@@ -2,58 +2,63 @@
 
 ## 📚 Description
 
-**Libft** is one of the first projects of the 42 curriculum.
-Its purpose is to recreate a custom standard C library containing common utility functions (string handling, memory management, conversions, linked lists, etc.) in order to strengthen your understanding of the C language and the fundamentals of programming.
+**ft_printf** is a project from the 42 curriculum aimed at recreating the famous `printf` function from the C standard library. You must write your own version, named `ft_printf`, capable of printing formatted text while handling different types and formatting options, all while respecting the behavior of the original.
 
-You implement your own versions of functions such as `memset`, `strcpy`, `atoi`, `split`, as well as a generic linked list module.
+This project requires careful management of type conversions, buffering, flags, and parsing of variable arguments (`va_arg`).
+
+---
 
 ## 🛠️ Features
 
-- Memory manipulation functions (`memset`, `memcpy`, etc.)
-- String handling functions (`strlen`, `strchr`, etc.)
-- Conversion functions (`atoi`, `itoa`, etc.)
-- Output functions (`putchar`, `putstr`, etc.)
-- Linked list management (`lstnew`, `lstadd_front`, `lstsize`, etc.)
-- Fully compliant with the rules and standards of 42 School
+- Handling of conversions: `%c`, `%s`, `%p`, `%d`, `%i`, `%u`, `%x`, `%X`, `%f`, `%lf`, `%ld` `%lld`, `%zu`, `%o`, `%n` and `%%`.
+- Handling of flag: `#`, ` `, `.`, `+`, `-`, `0`.
+- Formatted output to standard output
+- Handling of pointers and signed/unsigned integers
+- Counts and returns the number of characters printed
+- Respects the constraints and behavior of the standard function
+
+---
 
 ## 📂 Project Structure
 
-- `libft.h` : Header file containing all prototypes
-- `*.c` : Source files for each function
-- `Makefile` : Handles the compilation of the library
+- `ft_printf.c` : Main function
+- `*.c` : All srcs files
+- `ft_printf.h` : Header grouping prototypes and macros
+- `Makefile` : Project compilation
+
+---
 
 ## 🚀 Usage
 
 ### 1. Compilation
 
-```c
+```bash
 make
 ```
 
-This command generates the `libft.a` file (static library).
-
-### 2. Integration in your projects
+### 2. Usage in your projects
 
 Include the header in your code:
 
 ```c
-#include "libft.h"
+#include "ft_printf.h"
 ```
 
-And when compiling, link the library:
+Usage example:
 
-```bash
-gcc your_file.c -L. -lft
+```c
+ft_printf("Hello %s! Number: %d\n", "world", 42);
 ```
 
 ## 📝 Constraints
 
-- Respect the prototypes and behaviors of the standard C library
-- Proper error handling (NULL pointers, memory allocation, etc.)
-- Most libc functions are forbidden (except those allowed by the project requirements)
+- Respect prototypes and standard behavior
+- Correct handling of errors and memory
+- Forbidden to use ``printf``, ``sprintf``, etc.
+- Use of ``va_list``, ``va_start``, ``va_arg``, ``va_end``
 
 ## 💡 Tips
 
-- Test each function individually
-- Use valgrind to check for memory leaks
-- Follow the 42 coding standard (Norminette)
+- Test all formatting cases, including edge cases
+- Use ``valgrind`` to check for memory leaks
+- Respect the 42 coding standard (Norminette)
