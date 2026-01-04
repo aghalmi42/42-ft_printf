@@ -10,8 +10,7 @@ This project requires careful management of type conversions, buffering, flags, 
 
 ## 🛠️ Features
 
-- Handling of conversions: `%c`, `%s`, `%p`, `%d`, `%i`, `%u`, `%x`, `%X`, `%f`, `%lf`, `%ld` `%lld`, `%zu`, `%o`, `%n` and `%%`.
-- Handling of flag: `#`, ` `, `.`, `+`, `-`, `0`.
+- Handling of conversions: `%c`, `%s`, `%p`, `%d`, `%i`, `%u`, `%x`, `%X`, and `%%`.
 - Formatted output to standard output
 - Handling of pointers and signed/unsigned integers
 - Counts and returns the number of characters printed
